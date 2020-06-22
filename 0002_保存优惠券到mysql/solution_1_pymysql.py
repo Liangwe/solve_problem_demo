@@ -18,7 +18,7 @@ except pymysql.err.InternalError:
 
 insert_sql = "insert into coupon(val) values (%s)"
 
-with open("../0001/Coupon.txt" , 'r',encoding='utf-8') as f:
+with open("../0001_生成优惠券/Coupon.txt", 'r', encoding='utf-8') as f:
     fp = f.readlines()
 error = []
 print("开始插入数据")

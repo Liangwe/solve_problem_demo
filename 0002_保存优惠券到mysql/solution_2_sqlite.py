@@ -9,7 +9,7 @@ except sqlite3.OperationalError:
     print("表已存在")
 
 insert_sql = "insert into coupon(id,val) values(?,?)"
-with open("../0001/Coupon.txt" , 'r',encoding='utf-8') as f:
+with open("../0001_生成优惠券/Coupon.txt", 'r', encoding='utf-8') as f:
     fp = f.readlines()
 error = []
 print("开始插入数据")
