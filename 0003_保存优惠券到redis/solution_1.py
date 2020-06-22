@@ -1,3 +1,8 @@
+'''
+将 0001 题生成的 200 个激活码（或者优惠券）保存到 Redis 非关系型数据库中。
+运行此程序之前请务必开启redis
+'''
+
 import redis
 
 pool = redis.ConnectionPool(host='localhost', port=6379, decode_responses=True)
