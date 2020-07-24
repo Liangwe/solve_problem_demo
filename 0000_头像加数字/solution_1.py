@@ -7,7 +7,9 @@ from PIL import Image, ImageFont, ImageDraw  # 从PIL库导入所需模块
 def add_num(file,num):
     image = Image.open(headFile, 'r')
     w,h = image.size #得到图片长宽
-    font = ImageFont.truetype(font=r'C:/Windows/Fonts/arial.ttf',size=int(h/7))  #不同系统的字体位置视情况而定
+    #font = ImageFont.truetype(font=r'C:/Windows/Fonts/arial.ttf',size=int(h/7))  #不同系统的字体位置视情况而定
+
+    font = ImageFont.truetype(font=r'/System/Library/Fonts/Apple Symbols.ttf',size=int(h/7))   #mac字体
     ImageDraw.Draw(image).text((w*0.76,h*0.02), num ,font = font, fill = 'red')
 
     image.show() #展示绘制结果
